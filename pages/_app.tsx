@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Router from "next/router";
 import ProgressBar from "@badrap/bar-of-progress";
+import Head from "next/head";
 
 const progress = new ProgressBar({
   size: 4,
@@ -16,7 +17,17 @@ Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <link
+          rel="icon"
+          href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png"
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;

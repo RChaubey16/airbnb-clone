@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
@@ -14,6 +15,9 @@ const Search = ({ searchResults }: any) => {
 
   return (
     <div>
+      <Head>
+        <title>{location} | Airbnb</title>
+      </Head>
       <Header placeholder={`${location} | ${range} | ${numberOfGuests}`} />
       <main className="flex">
         <section className="flex-grow mt-14 px-6">

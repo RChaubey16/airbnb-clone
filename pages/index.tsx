@@ -12,9 +12,7 @@ const Home: NextPage = ({ exploreData, cardsData }: any) => {
     <div className="">
       <Head>
         {/* Page title */}
-        <title>Airbnb</title>
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home | Airbnb</title>
       </Head>
 
       <Header />
