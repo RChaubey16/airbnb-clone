@@ -12,7 +12,6 @@ const Search = ({ searchResults }: any) => {
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-  console.log(`SSR`, searchResults);
   return (
     <div>
       <Header placeholder={`${location} | ${range} | ${numberOfGuests}`} />
