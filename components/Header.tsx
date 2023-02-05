@@ -26,7 +26,7 @@ const Header = ({ placeholder = "Start your search" }) => {
     key: `selection`,
   };
 
-  const handleSelect = (ranges: RangeKeyDict): void => {
+  const handleSelect = (ranges: any): void => {
     // ranges data comes from the react date range library itself.
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
